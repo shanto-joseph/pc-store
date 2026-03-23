@@ -1,0 +1,226 @@
+html {
+    height: 100%;
+    /* background-image: url(https://mdevents.accessintel.com/oilcomm2020/wp-content/uploads/sites/95/2019/11/Mask-Group-37.png); */
+    background-image: url(../bg/bga.png);
+    background-attachment: fixed;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    min-height: 100vh;
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+    padding-left: 76px;
+    transition: padding-left 0.5s;
+}
+
+#support-tickets {
+    background: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.tickets-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.ticket {
+    background: rgba(0,0,0,.3);
+    border-radius: 8px;
+    padding: 25px;
+    transition: transform 0.3s ease;
+}
+
+.ticket:hover {
+    transform: translateY(-3px);
+}
+
+.ticket.pending {
+    border-left: 4px solid #ff9800;
+}
+
+.ticket.resolved {
+    border-left: 4px solid #1fbb1f;
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.ticket-header h3 {
+    color: #1fbb1f;
+    margin: 0;
+    font-size: 1.4em;
+}
+
+.ticket-status {
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.pending .ticket-status {
+    background: rgba(255,152,0,0.2);
+    color: #ff9800;
+}
+
+.resolved .ticket-status {
+    background: rgba(31,187,31,0.2);
+    color: #1fbb1f;
+}
+
+.ticket-info {
+    font-size: 0.95em;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 15px;
+}
+
+.ticket-info p {
+    margin: 5px 0;
+}
+
+.ticket-message {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.ticket-reply {
+    background: rgba(31,187,31,0.1);
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.ticket-reply h4 {
+    color: #1fbb1f;
+    margin: 0 0 10px 0;
+}
+
+.reply-date {
+    font-size: 0.9em;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 10px;
+}
+
+.reply-form {
+    margin-top: 20px;
+}
+
+.reply-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.reply-form textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(31,187,31,0.3);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    resize: vertical;
+    margin-bottom: 15px;
+}
+
+.reply-form textarea:focus {
+    outline: none;
+    border-color: #1fbb1f;
+}
+
+.reply-form button {
+    background: #1fbb1f;
+    color: #000;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reply-form button:hover {
+    background: #00ff00;
+}
+
+.success, .error {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.success {
+    background: rgba(31,187,31,0.2);
+    color: #1fbb1f;
+}
+
+.error {
+    background: rgba(255,59,48,0.2);
+    color: #ff3b30;
+}
+
+@media (max-width: 768px) {
+    .ticket-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .ticket-status {
+        align-self: flex-start;
+    }
+
+    main {
+        padding: 80px 12px 20px;
+    }
+}
+/* Navigation bar — handled by nav.css sidebar */
+
+/* --------------------- */
+/* Footer styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem;
+    margin-top: 3rem;
+    backdrop-filter: blur(10px);
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #1fbb1f;
+  }
+  
+  .footer-copyright {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }

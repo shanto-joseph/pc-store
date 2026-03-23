@@ -1,0 +1,218 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url(../bg/bga.png);
+    min-height: 100vh;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin: 0 0 20px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Main content styles */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Order details section */
+#order-details {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#order-details h3 {
+    color: #1fbb1f;
+    margin: 1.5rem 0 1rem;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+    background: rgba(31, 187, 31, 0.1);
+    color: #1fbb1f;
+    font-weight: bold;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Download invoice button */
+.download-invoice {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.download-btn {
+    background: linear-gradient(45deg, #1fbb1f, #00ff00);
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(34, 41, 34, 0.4);
+    background: linear-gradient(45deg, #00ff00, #1fbb1f);
+}
+
+.download-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(31, 187, 31, 0.3);
+}
+
+/* Action buttons */
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #1fbb1f;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background: #00ff00;
+}
+
+/* Navigation styles */
+nav {
+    background: rgba(0,0,0,.5);
+    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #1fbb1f;
+}
+
+/* Footer styles */
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav {
+        border-radius: 15px;
+        padding: 10px 15px;
+        width: calc(100% - 2rem);
+    }
+
+    nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    main { padding: 0 0.75rem; }
+}
+
+@media (max-width: 480px) {
+    #order-details {
+        padding: 1rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .download-btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,357 @@
+html {
+    height: 100%;
+        /* background-image: url(https://mdevents.accessintel.com/oilcomm2020/wp-content/uploads/sites/95/2019/11/Mask-Group-37.png); */
+        background-image: url("../bg/bga.png");
+    }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ── Login Box ── */
+.login-box {
+    width: 420px;
+    padding: 44px 40px 36px;
+    background: rgba(10, 10, 10, 0.72);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(31,187,31,0.08);
+    box-sizing: border-box;
+    border-radius: 18px;
+    position: relative;
+}
+
+/* top accent line */
+.login-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 10%; right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #1fbb1f, transparent);
+    border-radius: 0 0 4px 4px;
+}
+
+.login-box h2 {
+    margin: 0 0 8px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.login-box .subtitle {
+    text-align: center;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.85rem;
+    margin-bottom: 32px;
+}
+
+/* ── Input fields ── */
+.user-box {
+    position: relative;
+    margin-bottom: 28px;
+}
+
+.user-box input {
+    width: 100%;
+    padding: 14px 14px 14px 42px;
+    font-size: 15px;
+    color: #fff;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.user-box input:focus {
+    border-color: #1fbb1f;
+    background: rgba(31,187,31,0.06);
+}
+
+/* field icon */
+.user-box .field-icon {
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 17px;
+    color: rgba(255,255,255,0.35);
+    pointer-events: none;
+    transition: color 0.3s;
+}
+.user-box input:focus ~ .field-icon { color: #1fbb1f; }
+
+.user-box label {
+    position: absolute;
+    top: -9px;
+    left: 12px;
+    padding: 0 4px;
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.45);
+    background: transparent;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.user-box input:focus ~ label { color: #1fbb1f; }
+
+/* autofill override */
+.user-box input:-webkit-autofill,
+.user-box input:-webkit-autofill:hover,
+.user-box input:-webkit-autofill:focus,
+.user-box input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 40px rgba(31,187,31,0.06) inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* ── Error message ── */
+.login-error {
+    background: rgba(244,67,54,0.1);
+    border: 1px solid rgba(244,67,54,0.3);
+    color: #f87171;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ── Forgot password ── */
+.forgot-password {
+    display: block;
+    text-align: right;
+    color: rgba(255,255,255,0.45);
+    font-size: 12px;
+    text-decoration: none;
+    margin-top: -14px;
+    margin-bottom: 24px;
+    transition: color 0.2s;
+}
+.forgot-password:hover { color: #1fbb1f; }
+
+/* ── Login button ── */
+.login-button {
+    width: 100%;
+    padding: 13px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #000;
+    background: linear-gradient(135deg, #1fbb1f, #17a317);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: filter 0.25s, transform 0.15s;
+    margin-bottom: 22px;
+}
+.login-button:hover  { filter: brightness(1.12); }
+.login-button:active { transform: scale(0.98); }
+
+/* ── Sign-up link ── */
+.links-container {
+    text-align: center;
+    color: rgba(255,255,255,0.45);
+    font-size: 13.5px;
+}
+.signup-link {
+    color: #1fbb1f;
+    text-decoration: none;
+    font-weight: 600;
+}
+.signup-link:hover { text-decoration: underline; }
+
+/* ── Password toggle ── */
+.password-toggle {
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgba(255,255,255,0.35);
+    font-size: 16px;
+    transition: color 0.2s;
+}
+.password-toggle:hover { color: #1fbb1f; }
+
+.menu-button {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.menu-button span {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    transform: scale(1.1);
+}
+
+.menu-button:hover span {
+    background-color: #1fbb1f;
+}
+
+.side-nav {
+    position: absolute;
+    top: 0px;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    padding-top: 60px;
+    transition: left 0.3s ease;
+}
+
+.side-nav.open {
+    left: 0;
+}
+
+.side-nav a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav a:hover {
+    background-color: #1fbb1f;
+    color: #000;
+    border-radius: 18px
+}
+/*---------------*/
+#message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1fbb1f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+    z-index: 2000;
+}
+
+/* bar */
+.up {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 25px;
+    width: 100%;
+    z-index: 1000; /* Make sure it's on top of other elements  rgba(0,0,0,.5);*/
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.082);
+    border-radius: 20px;
+    padding: 5px 15px;
+    min-width: 400px;
+    height: 35px;
+}
+
+.item {
+    cursor: pointer;
+    padding: 5px 35px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+.item a {
+    text-decoration: none;
+    color: inherit; /* This inherits the white color from parent */
+    display: block;
+    width: 100%;
+}
+
+.item:hover,
+.item:hover a {
+    color: #1fbb1f;
+    transition: color 0.3s ease; /* Optional: adds smooth color transition */
+}
+/* logo------------------------- */
+.logo {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1500;
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+
+.logo-icon {
+    width: 35px;
+    height: auto;
+    margin-right: 8px;
+    color: #fff;
+    transition: filter 0.3s ease; /* Smooth transition for icon */
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for text */
+}
+
+/* Hover effects for both icon and text */
+.logo:hover .logo-icon {
+    filter: brightness(0) saturate(100%) invert(52%) sepia(79%) saturate(443%) hue-rotate(84deg) brightness(97%) contrast(88%);
+    transition: filter 0.3s ease;
+}
+
+.logo:hover .logo-text {
+    color: #1fbb1f;
+}
+   
+
+/* ── Responsive ── */
+@media (max-width: 520px) {
+  .login-box {
+    width: 94vw;
+    padding: 32px 20px 28px;
+    border-radius: 14px;
+  }
+  .bar {
+    min-width: unset;
+    width: auto;
+    padding: 5px 10px;
+  }
+  .item { padding: 5px 12px; }
+  .logo { top: 14px; right: 12px; }
+  .logo-text { font-size: 17px; }
+  .logo-icon { width: 26px; }
+}

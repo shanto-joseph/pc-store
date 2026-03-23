@@ -1,0 +1,213 @@
+/* manage_categories */
+html {
+    height: 100%;
+    /* background-image: url(https://mdevents.accessintel.com/oilcomm2020/wp-content/uploads/sites/95/2019/11/Mask-Group-37.png); */
+    background-attachment: fixed;
+    background-image: url("../bg/bga.png");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    min-height: 100vh;
+    color: #fff;
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.category-card {
+    background: rgba(0,0,0,.5);
+    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+    border-radius: 10px;
+    padding: 25px;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-header h3 {
+    color: #1fbb1f;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.category-stats {
+    margin: 15px 0;
+    color: rgba(255,255,255,0.8);
+}
+
+.category-stats p {
+    margin: 5px 0;
+}
+
+.category-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.add-category-btn {
+    background: #1fbb1f;
+    color: #000;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.add-category-btn:hover {
+    background: #00ff00;
+}
+
+.edit-btn, .delete-btn {
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.edit-btn {
+    background: rgba(31,187,31,0.2);
+    color: #1fbb1f;
+}
+
+.delete-btn {
+    background: rgba(255,59,48,0.2);
+    color: #ff3b30;
+}
+
+.edit-btn:hover {
+    background: rgba(31,187,31,0.3);
+}
+
+.delete-btn:hover {
+    background: rgba(255,59,48,0.3);
+}
+
+.disabled-btn {
+    background: rgba(128,128,128,0.2);
+    color: #808080;
+    cursor: not-allowed;
+}
+
+.success, .error {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.success {
+    background: rgba(31,187,31,0.2);
+    color: #1fbb1f;
+}
+
+.error {
+    background: rgba(255,59,48,0.2);
+    color: #ff3b30;
+}
+/* Navigation bar */
+nav {
+    background: rgba(0,0,0,.5);
+    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: fit-content;
+    margin: 20px auto;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  nav li {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 15px;
+  }
+  
+  nav a:hover {
+    color: #1fbb1f;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    nav {
+        border-radius: 15px;
+        padding: 10px 15px;
+    }
+  
+    nav ul {
+        gap: 15px;
+    }
+  }
+
+  /* Footer styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem;
+    margin-top: 12rem;
+    backdrop-filter: blur(10px);
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #1fbb1f;
+  }
+  
+  .footer-copyright {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }

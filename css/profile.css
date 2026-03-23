@@ -1,0 +1,161 @@
+html {
+    height: 100%;
+    /* background-image: url(https://mdevents.accessintel.com/oilcomm2020/wp-content/uploads/sites/95/2019/11/Mask-Group-37.png);*/
+    background-image: url(../bg/bga.png); 
+    background-attachment: fixed;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    min-height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    padding-top: 20px;
+    padding-left: 76px;
+    transition: padding-left 0.5s;
+    flex: 1;
+}
+
+.section {
+    display: none;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.section.active {
+    display: block;
+}
+
+h2 {
+    margin: 0 0 30px;
+    color: #fff;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-bottom-color: #1fbb1f;
+}
+
+button {
+    background-color: #1fbb1f;
+    color: #000;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #00ff00;
+}
+
+/* Orders Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(0,0,0,.3);
+    border-radius: 5px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+th {
+    background-color: rgba(31,187,31,0.2);
+    color: #1fbb1f;
+}
+
+tr:hover {
+    background-color: rgba(255,255,255,0.05);
+}
+
+/* Links */
+a {
+    color: #1fbb1f;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #00ff00;
+}
+
+.success {
+    background-color: rgba(31,187,31,0.2);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Review modal textarea */
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 15px;
+    min-height: 100px;
+    resize: vertical;
+    outline: none;
+    box-sizing: border-box;
+}
+textarea:focus { border-color: #1fbb1f; }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  main {
+    padding: 80px 8px 20px !important;
+  }
+
+  .section {
+    padding: 20px 14px;
+    margin: 0 8px 20px;
+  }
+
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  th, td { padding: 10px 8px; font-size: 0.88rem; }
+}

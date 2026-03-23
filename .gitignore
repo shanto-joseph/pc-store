@@ -1,0 +1,13 @@
+# Environment variables — never commit this
+.env
+
+# WAMP/PHP logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Uploaded product images (keep folder, ignore contents)
+uploads/*
+!uploads/.gitkeep

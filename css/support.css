@@ -1,0 +1,213 @@
+html {
+    height: 100%;
+    /* background-image: url(https://mdevents.accessintel.com/oilcomm2020/wp-content/uploads/sites/95/2019/11/Mask-Group-37.png); */
+    background-image: url(../bg/bga.png);
+    background-attachment: fixed;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    min-height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    padding-top: 20px;
+    padding-left: 76px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    transition: padding-left 0.5s;
+    max-width: 100%;
+    flex: 1;
+}
+
+section {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin: 0 0 30px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Form Styles */
+form {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+/* Remove the dark background from sections */
+section {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+/* Make form elements transparent */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    resize: vertical;
+    transition: border-color 0.3s;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+input:focus, textarea:focus {
+    border-color: #1fbb1f;
+    background: transparent;
+}
+
+/* Remove background from the form container */
+#create-ticket {
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Ensure the form itself is transparent */
+form {
+    background: transparent;
+}
+
+button {
+    background-color: #1fbb1f;
+    color: #000;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #00ff00;
+}
+
+/* Tickets List */
+.tickets-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ticket {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ticket h3 {
+    color: #1fbb1f;
+    margin: 0 0 10px;
+}
+
+.ticket-date, .reply-date {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.ticket-message, .reply-message {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.ticket-status {
+    display: inline-block;
+    padding: 5px 10px;
+    background: rgba(31, 187, 31, 0.2);
+    border-radius: 3px;
+    color: #1fbb1f;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+.ticket-reply {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ticket-reply h4 {
+    color: #1fbb1f;
+    margin: 0 0 10px;
+}
+
+/* Messages */
+.success, .error {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.success {
+    background-color: rgba(31, 187, 31, 0.2);
+    color: #fff;
+}
+
+.error {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #fff;
+}
+
+/* Navigation bar */
+nav {
+    background: rgba(0,0,0,.5);
+    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+    padding: 10px 20px;
+    margin: 20px auto;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: fit-content;
+    max-width: calc(100% - 2rem);
+}
+nav ul { list-style: none; padding: 0; margin: 0; display: flex; align-items: center; gap: 25px; }
+nav li { display: flex; align-items: center; }
+nav a { color: #fff; text-decoration: none; transition: color 0.3s; font-size: 15px; }
+nav a:hover { color: #1fbb1f; }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  main {
+    padding: 80px 12px 20px !important;
+    max-width: 100%;
+  }
+
+  section { padding: 20px 14px; }
+
+  input, textarea { width: 100%; box-sizing: border-box; }
+}
