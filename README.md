@@ -1,40 +1,74 @@
-# PC STORE 🖥️
+<div align="center">
 
-A full-stack multi-vendor e-commerce platform for PC hardware and accessories, built with PHP, MySQL, and vanilla JavaScript.
+<img src="logo.png" alt="PC Store Logo" width="80" />
 
-![PHP](https://img.shields.io/badge/PHP-8.4-777BB4?logo=php&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-8.4-4479A1?logo=mysql&logoColor=white)
-![License](https://img.shields.io/badge/license-MIT-green)
+# PC STORE
+
+**A multi-vendor e-commerce platform for PC hardware and accessories**
+
+[![PHP](https://img.shields.io/badge/PHP-8.4-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
+[![MySQL](https://img.shields.io/badge/MySQL-8.4-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://mysql.com)
+[![License](https://img.shields.io/badge/License-MIT-1fbb1f?style=for-the-badge)](LICENSE)
+
+[Live Demo](#) · [Report Bug](https://github.com/shanto-joseph/pc-store/issues) · [Request Feature](https://github.com/shanto-joseph/pc-store/issues)
+
+</div>
+
+---
+
+## Overview
+
+PC STORE is a full-stack multi-vendor e-commerce web app where customers can shop for PC components, vendors can list and manage their products, and admins oversee the entire platform. Built with plain PHP, MySQL, and vanilla JS — no frameworks, no Composer required.
+
+---
+
+## Screenshots
+
+| Home | Products | Admin Dashboard |
+|:---:|:---:|:---:|
+| ![Home](screenshots/Screenshot%202026-03-23%20092922.png) | ![Products](screenshots/Screenshot%202026-03-23%20093711.png) | ![Admin](screenshots/Screenshot%202026-03-23%20105433.png) |
 
 ---
 
 ## Features
 
-### Customer
-- Register / Login / Forgot Password
-- Browse products by category, search, price range, sort
-- Product details with ratings and stock status
-- Add to cart, update quantity, remove items
-- Checkout with shipping address + Razorpay payment
-- Order history with PDF invoice download
-- Submit product reviews (purchase-verified)
+<details>
+<summary><strong>🛒 Customer</strong></summary>
+
+- Register, login, forgot password with email reset
+- Browse by category, search, filter by price, sort results
+- Product detail pages with ratings and live stock status
+- Cart management — add, update quantity, remove
+- Checkout with shipping address + Razorpay payment gateway
+- Order history with downloadable PDF invoices
+- Purchase-verified product reviews
 - Support ticket system
 
-### Vendor
-- Register and manage your own product listings
-- Add / Edit / Delete products (with image upload)
-- Products go through admin approval before going live
-- Sales reports and analytics dashboard
+</details>
+
+<details>
+<summary><strong>🏪 Vendor</strong></summary>
+
+- Dedicated vendor registration and dashboard
+- Add, edit, delete product listings with image uploads
+- Products require admin approval before going live
+- Sales analytics and revenue reports
 - Low stock alerts
 - Support ticket system
 
-### Admin
-- Approve / Reject vendor product submissions
-- Manage all products, categories, users
+</details>
+
+<details>
+<summary><strong>🔧 Admin</strong></summary>
+
+- Approve or reject vendor product submissions
+- Full product, category, and user management
 - Order management with status updates
-- Sales reports with Chart.js visualizations
+- Platform-wide sales reports with Chart.js charts
 - Support ticket replies
-- Delete users (with full cascade cleanup)
+- User deletion with full cascade cleanup
+
+</details>
 
 ---
 
@@ -43,66 +77,62 @@ A full-stack multi-vendor e-commerce platform for PC hardware and accessories, b
 | Layer | Technology |
 |---|---|
 | Backend | PHP 8.4 |
-| Database | MySQL 8.4 (PDO) |
-| Frontend | HTML5, CSS3, Vanilla JS |
-| PDF | TCPDF |
-| Payment | Razorpay |
+| Database | MySQL 8.4 via PDO |
+| Frontend | HTML5, CSS3, Vanilla JavaScript |
+| PDF Generation | TCPDF |
+| Payments | Razorpay |
 | Charts | Chart.js |
-| Icons | Boxicons |
+| Icons | Boxicons + Custom SVGs |
 
 ---
 
 ## Project Structure
 
 ```
-/
+pc-store/
 ├── admin/          # Admin dashboard pages
 ├── vendor/         # Vendor dashboard pages
-├── css/            # All stylesheets
+├── css/            # Stylesheets
 ├── js/             # JavaScript files
 ├── icon/           # SVG icons
-├── image/          # Carousel images
-├── bg/             # Background images
-├── uploads/        # Product images (auto-created)
-├── tcpdf/          # PDF generation library
-├── config.php      # DB connection (uses .env)
-├── env.php         # .env loader (no Composer needed)
-├── functions.php   # All shared PHP functions
-├── database.sql    # Full DB schema + seed data
-└── .env            # Secret keys (never committed)
+├── image/          # Homepage carousel images
+├── uploads/        # Uploaded product images
+├── tcpdf/          # PDF library (bundled)
+├── config.php      # DB connection (reads .env)
+├── env.php         # Lightweight .env loader
+├── functions.php   # Shared helper functions
+├── database.sql    # Full schema + seed data
+└── .env            # Secrets — never committed
 ```
 
 ---
 
-## Setup
+## Getting Started
 
 ### Requirements
+
 - WAMP / XAMPP / LAMP
 - PHP 8.0+
 - MySQL 8.0+
 
-### Steps
+### Installation
 
-**1. Clone the repo**
+**1. Clone the repository**
 ```bash
-git clone https://github.com/yourusername/pc-store.git
+git clone https://github.com/shanto-joseph/pc-store.git
 cd pc-store
 ```
 
 **2. Import the database**
 
-Open phpMyAdmin, create a database called `my_website`, then import:
-```
-database.sql
-```
+In phpMyAdmin, create a database named `my_website` and import `database.sql`.
 
-**3. Configure environment**
-
-Copy the example and fill in your values:
+**3. Set up environment variables**
 ```bash
 cp .env.example .env
 ```
 
+Edit `.env` with your values:
 ```env
 DB_HOST=localhost
 DB_NAME=my_website
@@ -113,14 +143,9 @@ RAZORPAY_KEY_ID=your_key_id_here
 RAZORPAY_KEY_SECRET=your_key_secret_here
 ```
 
-**4. Create uploads folder** (if not already present)
-```bash
-mkdir uploads
-```
+**4. Place in web root**
 
-**5. Serve the project**
-
-Place the folder in your WAMP/XAMPP `www` or `htdocs` directory and visit:
+Move the folder to your WAMP `www` or XAMPP `htdocs` directory, then visit:
 ```
 http://localhost/pc-store/
 ```
@@ -134,38 +159,34 @@ http://localhost/pc-store/
 | Admin | admin@pcstore.com | Admin@123 |
 | Vendor | vendor@pcstore.com | Vendor@123 |
 
-> You can register new customer accounts from the login page.
+> Register new customer accounts directly from the login page.
 
 ---
 
-## Payment (Razorpay)
+## Razorpay Test Payments
 
-This project uses [Razorpay](https://razorpay.com) in test mode. To test payments:
-
-1. Get your test API keys from the [Razorpay Dashboard](https://dashboard.razorpay.com)
-2. Add them to your `.env` file
-3. Use Razorpay's [test card numbers](https://razorpay.com/docs/payments/payments/test-card-details/) at checkout
+1. Grab your test API keys from the [Razorpay Dashboard](https://dashboard.razorpay.com)
+2. Add them to `.env`
+3. Use [Razorpay test cards](https://razorpay.com/docs/payments/payments/test-card-details/) at checkout
 
 ---
 
-## Screenshots
+## Security
 
-| Home | Products | Admin Dashboard |
-|---|---|---|
-| ![home](screenshots/Screenshot%202026-03-23%20092922.png) | ![products](screenshots/Screenshot%202026-03-23%20093711.png) | ![admin](screenshots/Screenshot%202026-03-23%20105433.png) |
-
----
-
-## Security Notes
-
-- All secrets stored in `.env` — never committed to git
+- Secrets in `.env` — excluded from git via `.gitignore`
 - Passwords hashed with `password_hash()` (bcrypt)
-- All DB queries use PDO prepared statements
-- All user output escaped with `htmlspecialchars()`
-- Reviews restricted to verified purchasers only
+- All queries use PDO prepared statements
+- All output escaped with `htmlspecialchars()`
+- Reviews restricted to verified purchasers
 
 ---
 
 ## License
 
-MIT — free to use, modify, and distribute.
+[MIT](LICENSE) — free to use, modify, and distribute.
+
+---
+
+<div align="center">
+Made with ☕ by <a href="https://github.com/shanto-joseph">shanto-joseph</a>
+</div>
