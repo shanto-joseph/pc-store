@@ -24,7 +24,7 @@ PC STORE is a full-stack multi-vendor e-commerce web app where customers can sho
 
 ## Screenshots
 
-| Home | Products | Admin Dashboard |
+| Home | Admin Dashboard | Product Page |
 |:---:|:---:|:---:|
 | ![Home](screenshots/Screenshot%202026-03-23%20092922.png) | ![Products](screenshots/Screenshot%202026-03-23%20093711.png) | ![Admin](screenshots/Screenshot%202026-03-23%20105433.png) |
 
